@@ -22,9 +22,11 @@ $is_megamenu = 'yes';
 <?php /*----- wrapper 시작 -----*/ ?>
 <div class="wrapper">
     <h1 id="hd-h1"><?php echo $g5['title'] ?></h1>
+    <!-- Skip to content -->
     <div class="to-content"><a href="#container">본문 바로가기</a></div>
     <?php
     // 팝업창
+    //Run only on
     if (defined('_INDEX_') && $newwin_contents) { // index에서만 실행
         echo $newwin_contents;
     }
@@ -39,21 +41,27 @@ $is_megamenu = 'yes';
                         <ul class="top-header-nav list-unstyled thn-start">
                         <?php if ($eyoom['is_shop_theme'] == 'y') { ?>
                             <?php if (defined('_SHOP_') && $eyoom['use_layout_community'] == 'y') { ?>
-                            <li class="cs-nav c-nav"><a href="<?php echo G5_URL; ?>"><span class="deactivate">커뮤니티</span></a></li>
-                            <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>" class="disabled"><span class="activate">쇼핑몰</span></a></li>
+                                <!-- community -->
+                                <li class="cs-nav c-nav"><a href="<?php echo G5_URL; ?>"><span class="deactivate">커뮤니티</span></a></li>
+                                <!-- shopping mall -->
+                                <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>" class="disabled"><span class="activate">쇼핑몰</span></a></li>
                             <?php } else if (defined('G5_USE_SHOP') && G5_USE_SHOP) { ?>
-                            <li class="cs-nav c-nav"><a href="<?php echo G5_URL; ?>" class="disabled"><span class="activate">커뮤니티</span></a></li>
-                            <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>"><span class="deactivate">쇼핑몰</span></a></li>
+                                <!-- community -->
+                                <li class="cs-nav c-nav"><a href="<?php echo G5_URL; ?>" class="disabled"><span class="activate">커뮤니티</span></a></li>
+                                <!-- shopping mall -->
+                                <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>"><span class="deactivate">쇼핑몰</span></a></li>
                             <?php } ?>
                         <?php } ?>
                             <li>
                                 <?php echo eb_connect('basic_top'); ?>
                             </li>
+                            <!-- If you are an administrator -->
                             <?php if ($is_admin) { // 관리자일 경우 ?>
                             <li>
                                 <div class="eyoom-form">
                                     <input type="hidden" name="edit_mode" id="edit_mode" value="<?php echo $eyoom_default['edit_mode']; ?>">
                                     <label class="toggle">
+                                        <!-- Edit mode -->
                                         <input type="checkbox" id="btn_edit_mode" <?php echo $eyoom_default['edit_mode'] == 'on' ? 'checked':''; ?>><i></i><span class="text-black"><span class="fas fa-sliders-h m-r-5"></span>편집모드</span>
                                     </label>
                                 </div>
@@ -65,24 +73,35 @@ $is_megamenu = 'yes';
                         <ul class="top-header-nav list-unstyled thn-end">
                             <?php if ($is_member) {  ?>
                                 <?php if ($is_admin) {  ?>
-                            <li><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>"><i class="fas fa-cog text-crimson"></i>관리자</a></li>
+                                    <!-- manager -->
+                                    <li><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>"><i class="fas fa-cog text-crimson"></i>관리자</a></li>
                                 <?php }  ?>
-                            <li><a href="<?php echo G5_BBS_URL ?>/logout.php"><i class="fas fa-sign-out-alt"></i>로그아웃</a></li>
+                                <!-- log out -->
+                                <li><a href="<?php echo G5_BBS_URL ?>/logout.php"><i class="fas fa-sign-out-alt"></i>로그아웃</a></li>
                             <?php } else {  ?>
-                            <li><a href="<?php echo G5_BBS_URL ?>/login.php"><i class="fas fa-unlock-alt"></i>로그인</a></li>
-                            <li><a href="<?php echo G5_BBS_URL ?>/register.php"><i class="fas fa-user-plus"></i>회원가입</a></li>
+                                <!-- log in -->
+                                <li><a href="<?php echo G5_BBS_URL ?>/login.php"><i class="fas fa-unlock-alt"></i>로그인</a></li>
+                                <!-- join the membership -->
+                                <li><a href="<?php echo G5_BBS_URL ?>/register.php"><i class="fas fa-user-plus"></i>회원가입</a></li>
                             <?php }  ?>
                             <li class="dropdown">
                                 <a class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <!-- Additional menu -->
                                     <i class="fas fa-plus-circle"></i>추가메뉴
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <!-- New posts -->
                                     <a href="<?php echo G5_BBS_URL ?>/new.php">새글</a>
+                                    <!-- Popular posts -->
                                     <a href="<?php echo G5_BBS_URL ?>/best.php">인기게시물</a>
+                                    <!-- Frequently Asked Questions -->
                                     <a href="<?php echo G5_BBS_URL ?>/faq.php">자주묻는 질문</a>
+                                    <!-- 1:1 inquiry -->
                                     <a href="<?php echo G5_BBS_URL ?>/qalist.php">1:1문의</a>
+                                    <!-- If you are a member -->
                                     <?php if ($is_member) { // 회원일 경우 ?>
-                                    <a href="<?php echo G5_BBS_URL; ?>/member_confirm.php?url=register_form.php">회원정보수정</a>
+                                        <!-- Edit member information -->
+                                        <a href="<?php echo G5_BBS_URL; ?>/member_confirm.php?url=register_form.php">회원정보수정</a>
                                     <?php } ?>
                                 </div>
                             </li>
@@ -93,11 +112,14 @@ $is_megamenu = 'yes';
         </div>
         <div class="header-title">
             <div class="container">
+                <!-- Start site logo -->
                 <?php /* ===== 사이트 로고 시작 ===== */ ?>
                 <?php if ($is_admin == 'super' && !G5_IS_MOBILE) { ?>
                 <div class="adm-edit-btn btn-edit-mode" style="top:0;left:12px;text-align:left">
                     <div class="btn-group">
+                        <!-- logo settings -->
                         <a href="<?php echo G5_ADMIN_URL; ?>/?dir=theme&amp;pid=biz_info&amp;amode=logo&amp;thema=<?php echo $theme; ?>&amp;wmode=1" onclick="eb_admset_modal(this.href); return false;" class="ae-btn-l"><i class="far fa-edit"></i> 로고 설정</a>
+                        <!-- Open new window -->
                         <a href="<?php echo G5_ADMIN_URL; ?>/?dir=theme&amp;pid=biz_info&amp;amode=logo&amp;thema=<?php echo $theme; ?>" target="_blank" class="ae-btn-r" title="새창 열기">
                             <i class="fas fa-external-link-alt"></i>
                         </a>
@@ -123,14 +145,17 @@ $is_megamenu = 'yes';
                     <?php } ?>
                 <?php } ?>
                 </a>
+                <!-- end of site logo -->
                 <?php /* ===== 사이트 로고 끝 ===== */ ?>
 
                 <div class="header-title-search d-none d-lg-block">
                     <form name="fsearchbox" method="get" action="<?php echo G5_BBS_URL; ?>/search.php" onsubmit="return fsearchbox_submit(this);" class="eyoom-form">
                     <input type="hidden" name="sfl" value="wr_subject||wr_content">
                     <input type="hidden" name="sop" value="and">
+                        <!-- Enter search term required -->
                     <label for="modal_sch_stx" class="sound_only"><strong>검색어 입력 필수</strong></label>
                     <div class="input input-button">
+                        <!-- Search entire bulletin board -->
                         <input type="text" name="stx" id="modal_sch_stx" class="sch_stx" maxlength="20" placeholder="전체 게시판 검색">
                         <div class="button"><input type="submit"><i class="fas fa-search"></i></div>
                     </div>
@@ -139,16 +164,20 @@ $is_megamenu = 'yes';
 
                 <div class="header-title-btn">
                     <div class="title-btn">
+                        <!-- Only members have access. -->
                         <a <?php if ($is_member) { ?>href="<?php echo G5_URL; ?>/?<?php echo $member['mb_id']; ?>"<?php } else { ?>href="javascript:void(0);" onclick="alert('회원만 접근하실 수 있습니다.');"<?php } ?>>
                             <div class="title-btn-in">
+                                <!-- My Home -->
                                 <span class="title-btn-text">마이홈</span>
                                 <i class="fas fa-caret-square-right"></i>
                             </div>
                         </a>
                     </div>
                     <div class="title-btn">
+                        <!-- Only members have access. -->
                         <a <?php if ($is_member) { ?>href="<?php echo G5_URL; ?>/mypage/"<?php } else { ?>href="javascript:void(0);" onclick="alert('회원만 접근하실 수 있습니다.');"<?php } ?>>
                             <div class="title-btn-in title-btn-navy">
+                                <!-- My page -->
                                 <span class="title-btn-text">마이페이지</span>
                                 <i class="fas fa-caret-square-right"></i>
                             </div>
@@ -158,10 +187,12 @@ $is_megamenu = 'yes';
 
                 <div class="header-title-mobile-btn">
                     <button type="button" class="navbar-toggler search-toggle mobile-search-btn">
+                        <!-- search button -->
                         <span class="sr-only">검색 버튼</span>
                         <span class="fas fa-search"></span>
                     </button>
                     <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">
+                        <!-- menu button -->
                         <span class="sr-only">메뉴 버튼</span>
                         <span class="fas fa-bars"></span>
                     </button>
@@ -177,23 +208,28 @@ $is_megamenu = 'yes';
                                 <h5 class="offcanvas-title f-s-16r" id="offcanvasLeftLabel"><i class="fas fa-bars m-r-10 text-gray"></i>NAVIGATION</h5>
                                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                             </div>
+                            <!-- Start content for mobile // Output only under 991 pixels -->
                             <?php /* ---------- 모바일용 컨텐츠 시작 // 991픽셀 이하에서만 출력 ---------- */ ?>
                             <?php if ($eyoom['is_shop_theme'] == 'y' || $is_member) { ?>
                             <div class="sidebar-member-menu">
                                 <?php if (defined('G5_USE_SHOP') && G5_USE_SHOP && $eyoom['is_shop_theme'] == 'y') { ?>
                                 <a href="<?php echo G5_SHOP_URL; ?>" class="btn-e btn-e-md btn-e-navy btn-e-block m-t-10 m-b-10">
+                                    <!-- shopping mall -->
                                     쇼핑몰<i class="far fa-caret-square-right m-l-5"></i>
                                 </a>
                                 <?php } ?>
+                                <!-- If you are a member -->
                                 <?php if ($is_member) { // 회원일 경우 ?>
                                 <div class="m-t-10">
                                     <a href="<?php echo G5_URL; ?>/?<?php echo $member['mb_id']; ?>" class="sidebar-member-btn-box">
                                         <div class="sidebar-member-btn">
+                                            <!-- My Home -->
                                             마이홈
                                         </div>
                                     </a>
                                     <a href="<?php echo G5_URL; ?>/mypage/" class="sidebar-member-btn-box">
                                         <div class="sidebar-member-btn float-end">
+                                            <!-- My page -->
                                             마이페이지
                                         </div>
                                     </a>
@@ -202,11 +238,13 @@ $is_megamenu = 'yes';
                                 <div class="m-t-10 m-b-10">
                                     <a <?php if (!G5_IS_MOBILE) { ?>href="javascript:void(0);" onclick="memo_modal();"<?php } else { ?>href="<?php echo G5_BBS_URL; ?>/memo.php" target="_blank"<?php } ?> class="sidebar-member-btn-box">
                                         <div class="sidebar-member-btn">
+                                            <!-- note -->
                                             쪽지<?php if ($memo_not_read) { ?><span class="badge badge-e badge-crimson m-l-5"><?php echo $memo_not_read; ?></span><?php } ?>
                                         </div>
                                     </a>
                                     <a href="<?php echo G5_URL; ?>/mypage/respond.php" class="sidebar-member-btn-box">
                                         <div class="sidebar-member-btn float-end">
+                                            <!-- My Post Response -->
                                             내글반응<?php if ( $respond_not_read >= 1 ) { ?><span class="badge badge-e badge-crimson m-l-5"><?php echo $respond_not_read; ?></span><?php } ?>
                                         </div>
                                     </a>
@@ -216,11 +254,13 @@ $is_megamenu = 'yes';
                                 <div class="m-t-10 m-b-10">
                                     <a href="<?php echo G5_BBS_URL ?>/login.php" class="sidebar-member-btn-box">
                                         <div class="sidebar-member-btn">
+                                            <!-- log in -->
                                             로그인
                                         </div>
                                     </a>
                                     <a href="<?php echo G5_BBS_URL ?>/register.php" class="sidebar-member-btn-box">
                                         <div class="sidebar-member-btn float-end">
+                                            <!-- join the membership -->
                                             회원가입
                                         </div>
                                     </a>
@@ -229,12 +269,15 @@ $is_megamenu = 'yes';
                                 <?php } ?>
                             </div>
                             <?php } ?>
+                            <!-- End of mobile content -->
                             <?php /* ---------- 모바일용 컨텐츠 끝 ---------- */ ?>
                             <ul class="navbar-nav">
                                 <?php if ($is_admin == 'super' && !G5_IS_MOBILE) { ?>
                                 <div class="adm-edit-btn btn-edit-mode" style="top:0;text-align:left">
                                     <div class="btn-group">
+                                        <!-- Menu Settings -->
                                         <a href="<?php echo G5_ADMIN_URL; ?>/?dir=theme&amp;pid=menu_list&amp;thema=<?php echo $theme; ?>&amp;wmode=1" onclick="eb_admset_modal(this.href); return false;" class="ae-btn-l"><i class="far fa-edit"></i> 메뉴 설정</a>
+                                        <!-- Open new window -->
                                         <a href="<?php echo G5_ADMIN_URL; ?>/?dir=theme&amp;pid=menu_list&amp;thema=<?php echo $theme; ?>" target="_blank" class="ae-btn-r" title="새창 열기">
                                             <i class="fas fa-external-link-alt"></i>
                                         </a>
@@ -366,6 +409,7 @@ $is_megamenu = 'yes';
     </header>
     <?php /*----- header 끝 -----*/ ?>
 
+    <!-- When it is not the main -->
     <?php if(!defined('_INDEX_')) { // 메인이 아닐때 ?>
     <?php /*----- page title 시작 -----*/ ?>
     <div class="page-title-wrap">
@@ -386,6 +430,7 @@ $is_megamenu = 'yes';
             </div>
             <?php } ?>
         <?php } else { ?>
+                <!-- My page -->
             <h2><i class="fas fa-arrow-alt-circle-right"></i> 마이페이지</h2>
         <?php } ?>
         </div>
@@ -396,6 +441,7 @@ $is_megamenu = 'yes';
     <div class="basic-body <?php if(!defined('_INDEX_')) { ?>page-body<?php } ?>">
         <?php if(defined('_INDEX_')) { ?>
         <div class="main-slider-top">
+            <!-- EB Slider -->
             <?php /* EB슬라이더 - basic */ ?>
             <?php echo eb_slider('1516512257'); ?>
         </div>
@@ -405,8 +451,10 @@ $is_megamenu = 'yes';
             <div class="main-wrap">
                 <?php
                 if ($side_layout['pos'] == 'left') {
-                    /* 사이드영역 시작 */
+                    // Open new window
+                    /* Start side area */
                     include_once(EYOOM_THEME_PATH . '/side.html.php');
+                    //end of side area
                     /* 사이드영역 끝 */
                 }
                 ?>

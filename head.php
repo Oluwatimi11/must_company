@@ -26,6 +26,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 <!-- 상단 시작 { -->
 <div id="hd">
     <h1 id="hd_h1"><?php echo $g5['title'] ?></h1>
+    <!-- // Skip to content -->
     <div id="skip_to_container"><a href="#container">본문 바로가기</a></div>
 
     <?php
@@ -37,8 +38,10 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
         <div class="inner">
             <?php if(defined('G5_COMMUNITY_USE') == false || G5_COMMUNITY_USE) { ?>
     		<ul id="hd_define">
+    		<!-- Community -->
     			<li class="active"><a href="<?php echo G5_URL ?>/">커뮤니티</a></li>
                 <?php if (defined('G5_USE_SHOP') && G5_USE_SHOP) { ?>
+                <!-- Shopping mall -->
     			<li><a href="<?php echo G5_SHOP_URL ?>/">쇼핑몰</a></li>
                 <?php } ?>
     		</ul>
@@ -46,7 +49,9 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 			<ul id="hd_qnb">
 	            <li><a href="<?php echo G5_BBS_URL ?>/faq.php">FAQ</a></li>
 	            <li><a href="<?php echo G5_BBS_URL ?>/qalist.php">Q&A</a></li>
+	            <!-- New post -->
 	            <li><a href="<?php echo G5_BBS_URL ?>/new.php">새글</a></li>
+	            <!-- Accessor -->
 	            <li><a href="<?php echo G5_BBS_URL ?>/current_connect.php" class="visit">접속자<strong class="visit-num"><?php echo connect(); // 현재 접속자수, 테마의 스킨을 사용하려면 스킨을 theme/basic 과 같이 지정 ?></strong></a></li>
 	        </ul>
 		</div>
@@ -59,12 +64,15 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     
         <div class="hd_sch_wr">
             <fieldset id="hd_sch">
+            <!-- Entire search within the site -->
                 <legend>사이트 내 전체검색</legend>
                 <form name="fsearchbox" method="get" action="<?php echo G5_BBS_URL ?>/search.php" onsubmit="return fsearchbox_submit(this);">
                 <input type="hidden" name="sfl" value="wr_subject||wr_content">
                 <input type="hidden" name="sop" value="and">
+                <!-- Search term required -->
                 <label for="sch_stx" class="sound_only">검색어 필수</label>
-                <input type="text" name="stx" id="sch_stx" maxlength="20" placeholder="검색어를 입력해주세요">
+                <input type="text" name="stx" id="sch_stx" maxlength="20" placeholder="검색어를 입력해주세요"><!-- Please enter your search term -->
+                <!-- Search -->
                 <button type="submit" id="sch_submit" value="검색"><i class="fa fa-search" aria-hidden="true"></i><span class="sound_only">검색</span></button>
                 </form>
 
@@ -103,13 +111,18 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
         </div>
         <ul class="hd_login">        
             <?php if ($is_member) {  ?>
+            <!-- Edit information -->
             <li><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php">정보수정</a></li>
+            <!-- log out -->
             <li><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
             <?php if ($is_admin) {  ?>
+            <!-- manager -->
             <li class="tnb_admin"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
             <?php }  ?>
             <?php } else {  ?>
+            <!-- join the membership -->
             <li><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></li>
+            <!-- log in -->
             <li><a href="<?php echo G5_BBS_URL ?>/login.php">로그인</a></li>
             <?php }  ?>
 
@@ -117,9 +130,11 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     </div>
     
     <nav id="gnb">
+    <!-- main menu -->
         <h2>메인메뉴</h2>
         <div class="gnb_wrap">
             <ul id="gnb_1dul">
+            <!-- Full menu -->
                 <li class="gnb_1dli gnb_mnal"><button type="button" class="gnb_menu_btn" title="전체메뉴"><i class="fa fa-bars" aria-hidden="true"></i><span class="sound_only">전체메뉴열기</span></button></li>
                 <?php
 				$menu_datas = get_menu_db(0, true);
@@ -158,6 +173,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                 <?php } ?>
             </ul>
             <div id="gnb_all">
+            <!-- Full menu -->
                 <h2>전체메뉴</h2>
                 <ul class="gnb_al_ul">
                     <?php
@@ -208,11 +224,13 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 
     </script>
 </div>
+<!-- top end -->
 <!-- } 상단 끝 -->
 
 
 <hr>
 
+<!-- Start content -->
 <!-- 콘텐츠 시작 { -->
 <div id="wrapper">
     <div id="container_wr">
