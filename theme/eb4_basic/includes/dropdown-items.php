@@ -61,3 +61,41 @@ $navItems = [
         'url' => G5_BBS_URL . '/logout.php'
     ]
 ];
+
+
+$footerItems = [
+    [
+        'label' => '카카오톡 채널추가',
+        'url' => G5_URL . '/mypage/'
+    ],
+    [
+        'label' => '상품후기',
+        'url' => G5_URL . '/mypage/'
+    ],
+    [
+        'label' => '1:1문의',
+        'url' => G5_BBS_URL . '/logout.php'
+    ],
+    [
+        'label' => 'FAQ',
+        'url' => G5_BBS_URL . '/logout.php'
+    ],
+    [
+        'label' => '공지사항',
+        'url' => G5_BBS_URL . '/logout.php'
+    ]
+];
+
+
+$footerBottom = [
+    [
+        'label' => '이용약관',
+    ],
+    [
+        'label' => '개인정보처리방침',
+    ],
+    [
+        'label' => '이메일무단수집거부',
+    ]
+];
+

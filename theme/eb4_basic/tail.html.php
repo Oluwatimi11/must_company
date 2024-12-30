@@ -3,6 +3,9 @@
  * theme file : /theme/THEME_NAME/tail.html.php
  */
 if (!defined('_EYOOM_')) exit;
+
+include_once(EYOOM_THEME_PATH . '/includes/dropdown-items.php');
+
 ?>
 
 
@@ -81,53 +84,20 @@ if (!defined('_EYOOM_')) exit;
                 </div>
                 <div class="footer-nav-right">
                     <div class="footer-title-list display-flex">
-                        <div class="footer-list-item">
+                        <?php
+                        foreach ($footerItems as $item) {
+                            echo '
+            <div class="footer-list-item">
                             <!-- Only members have access. -->
-                            <a class="footer-list-link" <?php if ($is_member) { ?>href="<?php echo G5_URL; ?>/?<?php echo $member['mb_id']; ?>"
-                               <?php } else { ?>href="javascript:void(0);" onclick="alert('회원만 접근하실 수 있습니다.');"<?php } ?>>
-                                <div class="footer-list-item-div">
-                                    <!-- Add KakaoTalk channel-->
-                                    <span class="footer-list-btn-text text-white">카카오톡 채널추가</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="footer-list-item">
-                            <!-- Only members have access. -->
-                            <a class="footer-list-link" <?php if ($is_member) { ?>href="<?php echo G5_URL; ?>/?<?php echo $member['mb_id']; ?>"
-                               <?php } else { ?>href="javascript:void(0);" onclick="alert('회원만 접근하실 수 있습니다.');"<?php } ?>>
-                                <div class="footer-list-item-div">
-                                    <!-- Shopping Cart -->
-                                    <span class="footer-list-btn-text text-white">상품후기</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="footer-list-item">
-                            <a class="footer-list-link" <?php if ($is_member) { ?>href="<?php echo G5_URL; ?>/mypage/"
-                               <?php } else { ?>href="javascript:void(0);" onclick="alert('회원만 접근하실 수 있습니다.');"<?php } ?>>
-                                <div class="footer-list-item-div">
-                                    <!-- My page -->
-                                    <span class="footer-list-btn-text text-white">1:1문의</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="footer-list-item">
-                            <!-- Only members have access. -->
-                            <a class="footer-list-link" href="<?php echo G5_BBS_URL ?>/logout.php">
-                                <div class="footer-list-item-div">
-                                    <!-- Log Out -->
-                                    <span class="footer-list-btn-text text-white">FAQ</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="footer-list-item">
-                            <!-- Only members have access. -->
-                            <a class="footer-list-link  display-flex" href="<?php echo G5_BBS_URL ?>/logout.php">
+                            <a class="footer-list-link  display-flex" href="' . $item['url'] . '">
                                 <div class="footer-list-item-div">
                                     <!-- see more -->
-                                    <span class="footer-list-btn-text text-white">공지사항</span>
+                                    <span class="footer-list-btn-text text-white">' . $item['label'] . '</span>
                                 </div>
                             </a>
-                        </div>
+                        </div>';
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -206,10 +176,13 @@ if (!defined('_EYOOM_')) exit;
 
                 <div class="footer-btm-list m-t-25 m-b-6">
                     <ul class="display-flex">
-                        <li><strong>이용약관</strong></li>
-                        <li><strong>개인정보처리방침</strong></li>
-                        <li><strong>이메일무단수집거부</strong></li>
+                        <?php
+                        foreach ($footerBottom as $item) {
+                            echo '<li><strong>' . $item['label'] . '</strong></li>';
+                        }
+                        ?>
                     </ul>
+
                 </div>
 
         </div>
