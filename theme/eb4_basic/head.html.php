@@ -7,6 +7,11 @@ if (!defined('_EYOOM_')) exit;
 add_stylesheet('<link rel="stylesheet" href="' . EYOOM_THEME_URL . '/css/style.css?ver=' . G5_CSS_VER . '">', 0);
 add_stylesheet('<link rel="stylesheet" href="' . EYOOM_THEME_URL . '/css/custom.css?ver=' . G5_CSS_VER . '">', 0);
 add_stylesheet('<link rel="stylesheet" href="' . EYOOM_THEME_URL . '/css/dropdown.css?ver=' . G5_CSS_VER . '">', 0);
+add_stylesheet('<link rel="stylesheet" href="' . EYOOM_THEME_URL . '/css/hamburger.css?ver=' . G5_CSS_VER . '">', 0);
+
+add_javascript('<script src="' . EYOOM_THEME_URL . '/js/dropdown.js?ver=' . G5_JS_VER . '"></script>', 0);
+add_javascript('<script src="' . EYOOM_THEME_URL . '/js/navbar.js?ver=' . G5_JS_VER . '"></script>', 0);
+
 
 include_once(EYOOM_THEME_PATH . '/includes/dropdown-items.php');
 
@@ -35,18 +40,28 @@ $is_megamenu = 'yes';
 
     <?php /*----- header 시작 -----*/ ?>
     <header class="nav-wrapper <?php if (!defined('_INDEX_')) { ?>page-header-wrap<?php } ?>">
+        <div class="hamburger-container">
+        <!-- Top Hamburger Menu -->
+        <div class="hamburger-menu top-hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Bottom Hamburger Menu -->
+        <div class="hamburger-menu btm-hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
         <div class="top-nav display-flex">
+            <!-- Logo (Centered) -->
             <div class="top-nav-left">
-                <!-- Start site logo -->
-                <?php /* ===== 사이트 로고 시작 ===== */ ?>
                 <?php if ($is_admin == 'super' && !G5_IS_MOBILE) { ?>
-                    <div class="adm-edit-btn btn-edit-mode" style="top:0;left:12px;text-align:left">
+                    <div class="adm-edit-btn btn-edit-mode">
                         <div class="btn-group">
-                            <!-- logo settings -->
-                            <!--                            <a href="-->
-                            <?php //echo G5_ADMIN_URL; ?><!--/?dir=theme&amp;pid=biz_info&amp;amode=logo&amp;thema=-->
-                            <?php //echo $theme; ?><!--&amp;wmode=1" onclick="eb_admset_modal(this.href); return false;" class="ae-btn-l"><i class="far fa-edit"></i> 로고 설정</a>-->
-                            <!-- Open new window -->
                             <a href="<?php echo G5_ADMIN_URL; ?>/?dir=theme&amp;pid=biz_info&amp;amode=logo&amp;thema=<?php echo $theme; ?>"
                                target="_blank" class="ae-btn-r" title="새창 열기">
                                 <i class="fas fa-external-link-alt"></i>
@@ -77,10 +92,10 @@ $is_megamenu = 'yes';
                         <?php } ?>
                     <?php } ?>
                 </a>
-                <!-- end of site logo -->
-                <?php /* ===== 사이트 로고 끝 ===== */ ?>
-
             </div>
+            <!-- end of site logo -->
+            <?php /* ===== 사이트 로고 끝 ===== */ ?>
+
             <div class="top-nav-right">
                 <div class="header-title-list display-flex">
                     <div class="list-item">
@@ -126,7 +141,7 @@ $is_megamenu = 'yes';
                     </div>
                     <div class="list-item see-more">
                         <!-- Only members have access. -->
-                        <a class="list-link  display-flex" href="<?php echo G5_BBS_URL ?>/logout.php">
+                        <a class="list-link  display-flex">
                             <div class="list-item-div">
                                 <!-- see more -->
                                 <span class="list-btn-text">더보기</span>
@@ -144,7 +159,7 @@ $is_megamenu = 'yes';
                     </div>
                 </div>
 
-                <div class="header-search-feature d-none d-lg-block m-l-15">
+                <div class="header-search-feature d-lg-block m-l-15">
                     <form name="fsearchbox" method="get" action="<?php echo G5_BBS_URL; ?>/search.php"
                           onsubmit="return fsearchbox_submit(this);" class="eyoom-form">
                         <input type="hidden" name="sfl" value="wr_subject||wr_content">
@@ -204,8 +219,6 @@ $is_megamenu = 'yes';
         </div>
     </header>
     <?php /*----- header 끝 -----*/ ?>
-
-    <script src="<?php echo EYOOM_THEME_URL ?>/js/dropdown.js"></script>
 
     <!-- When it is not the main -->
     <?php if (!defined('_INDEX_')) { // 메인이 아닐때 ?>

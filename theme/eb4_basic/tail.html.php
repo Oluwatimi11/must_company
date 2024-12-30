@@ -34,7 +34,7 @@ include_once(EYOOM_THEME_PATH . '/includes/dropdown-items.php');
     </div><?php /* End .basic-body */ ?>
 
     <?php /*----- footer 시작 -----*/ ?>
-    <footer class="footer">
+    <footer>
         <div class="footer-container text-white">
             <div class="footer-top-nav display-flex">
                 <div class="footer-nav-left">
@@ -141,7 +141,7 @@ include_once(EYOOM_THEME_PATH . '/includes/dropdown-items.php');
                         </div>
                     </div>
                 <?php } ?>
-                <div class="m-b-8">
+                <div class="footer-mid-content m-b-8">
                     <div class="m-b-4">
                         <strong class="text-white">CS CENTER 1522-2041</strong>
                         <span class="info-divider">|</span>
@@ -153,7 +153,7 @@ include_once(EYOOM_THEME_PATH . '/includes/dropdown-items.php');
                     </div>
                 </div>
 
-                <div class="m-b-8">
+                <div class="footer-mid-content m-b-8">
                     <div class="m-b-4">
                         <strong class="text-white">주식회사 포인투유</strong>
                         <span class="info-divider">|</span>
@@ -169,7 +169,7 @@ include_once(EYOOM_THEME_PATH . '/includes/dropdown-items.php');
                     </div>
                 </div>
 
-                <div class="footer-copyright-det text-dark-gray m-t-15 m-b-6">
+                <div class="footer-mid-content footer-copyright-det text-dark-gray m-t-15 m-b-6">
                     <span class="text-dark-gray">Copyright </span>&copy; <strong class="text-dark-gray f-w-400">P2U :: 포인투유</strong>. All Rights Reserved.
                 </div>
 

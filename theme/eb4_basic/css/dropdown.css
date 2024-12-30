@@ -47,6 +47,12 @@
     color: #333;
 }
 
+@media (max-width: 991px) {
+    .see-more-menu {
+        right: 300px;
+    }
+}
+
 
 
 /*Three Dimensional Dropdown*/
@@ -173,5 +179,11 @@
 .eyoom-btn-text {
     margin: 0;
     font-size: 14px;
-    color: #333;
+}
+
+
+@media (max-width: 620px) {
+    .category-dropdown {
+        overflow-x: visible;
+    }
 }

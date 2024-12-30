@@ -1,18 +1,65 @@
 const categoryData = {
-    "Electronics": {
+    "뷰티/피부": {
         "Home Appliances": ["Electric Iron", "Refrigerator", "Television"],
         "Kitchen Appliances": ["Electric Kettle", "Hot Plate", "Rice Cooker"],
         "Other Appliances": ["Wi-Fi", "Stabilizer", "Decoder"]
     },
-    "Clothing": {
+    "스킨케어": {
+        "남성전용 화장품": ["Trousers", "Men's Suit", "Tie"],
+        "에센스/세럼": ["뷰티기기/소품", "마스크/팩/스틱제품", "가구/인테리어","선케어(자외선차단)", "자동차/공구", "화장품세트","취미/여행", "추석선물"],
+        "디지털 가전": ["Hoodie", "Socks", "Sweater"],
+        "향수": ["뷰티기기/소품", "마스크/팩/스틱제품", "가구/인테리어","선케어(자외선차단)", "자동차/공구", "화장품세트","취미/여행", "추석선물"],
+        "크림/오일": ["Bikini", "Palazzo", "Dress"],
+        "생활/건강": ["뷰티기기/소품", "마스크/팩/스틱제품", "가구/인테리어","선케어(자외선차단)", "자동차/공구", "화장품세트","취미/여행", "추석선물"]
+    },
+    "클렌징": {
+        "Watches": ["G-Shock", "I-Watch", "Givendi"],
+        "Bags": ["Gucci", "Fendi", "D&G"],
+        "Jewelry": ["Ring", "Necklace", "Bracelet"]
+    },
+    "신선푸드": {
+        "남성전용 화장품": ["Trousers", "Men's Suit", "Tie"],
+        "에센스/세럼": ["뷰티기기/소품", "마스크/팩/스틱제품", "가구/인테리어","선케어(자외선차단)", "자동차/공구", "화장품세트","취미/여행", "추석선물"],
+        "디지털 가전": ["Hoodie", "Socks", "Sweater"],
+        "향수": ["뷰티기기/소품", "마스크/팩/스틱제품", "가구/인테리어","선케어(자외선차단)", "자동차/공구", "화장품세트","취미/여행", "추석선물"],
+        "크림/오일": ["Bikini", "Palazzo", "Dress"],
+        "생활/건강": ["뷰티기기/소품", "마스크/팩/스틱제품", "가구/인테리어","선케어(자외선차단)", "자동차/공구", "화장품세트","취미/여행", "추석선물"]
+    },
+    "메이크업": {
         "Men's Wear": ["Trousers", "Men's Suit", "Tie"],
         "Women's Wear": ["Bikini", "Palazzo", "Dress"],
         "Unisex": ["Hoodie", "Socks", "Sweater"]
     },
-    "Accessories": {
+    "스킨/토너/미스트": {
         "Watches": ["G-Shock", "I-Watch", "Givendi"],
         "Bags": ["Gucci", "Fendi", "D&G"],
         "Jewelry": ["Ring", "Necklace", "Bracelet"]
+    },
+    "가공푸드": {
+        "Home Appliances": ["Electric Iron", "Refrigerator", "Television"],
+        "Kitchen Appliances": ["Electric Kettle", "Hot Plate", "Rice Cooker"],
+        "Other Appliances": ["Wi-Fi", "Stabilizer", "Decoder"]
+    },
+    "헤어/바디": {
+        "남성전용 화장품": ["Trousers", "Men's Suit", "Tie"],
+        "에센스/세럼": ["뷰티기기/소품", "마스크/팩/스틱제품", "가구/인테리어","선케어(자외선차단)", "자동차/공구", "화장품세트","취미/여행", "추석선물"],
+        "디지털 가전": ["Hoodie", "Socks", "Sweater"],
+        "향수": ["뷰티기기/소품", "마스크/팩/스틱제품", "가구/인테리어","선케어(자외선차단)", "자동차/공구", "화장품세트","취미/여행", "추석선물"],
+        "크림/오일": ["Bikini", "Palazzo", "Dress"],
+        "생활/건강": ["뷰티기기/소품", "마스크/팩/스틱제품", "가구/인테리어","선케어(자외선차단)", "자동차/공구", "화장품세트","취미/여행", "추석선물"]
+    },
+    "로션/에멀젼": {
+        "Watches": ["G-Shock", "I-Watch", "Givendi"],
+        "Bags": ["Gucci", "Fendi", "D&G"],
+        "Jewelry": ["Ring", "Necklace", "Bracelet"]
+    },
+    "패션잡화": {
+        "남성전용 화장품": ["Trousers", "Men's Suit", "Tie"],
+        "에센스/세럼": ["뷰티기기/소품", "마스크/팩/스틱제품", "가구/인테리어","선케어(자외선차단)", "자동차/공구", "화장품세트","취미/여행", "추석선물"],
+        "디지털 가전": ["Hoodie", "Socks", "Sweater"],
+        "향수": ["뷰티기기/소품", "마스크/팩/스틱제품", "가구/인테리어","선케어(자외선차단)", "자동차/공구", "화장품세트","취미/여행", "추석선물"],
+        "크림/오일": ["Bikini", "Palazzo", "Dress"],
+        "생활/건강": ["뷰티기기/소품", "마스크/팩/스틱제품", "가구/인테리어","선케어(자외선차단)", "자동차/공구", "화장품세트","취미/여행", "추석선물"]
     }
 };
 

@@ -22,7 +22,9 @@ if ($config['cf_add_meta']) echo $config['cf_add_meta'];
 
 <title><?php echo $g5_head_title; ?></title>
 <link rel="stylesheet" href="<?php echo $css_href; ?>">
-<?php
+
+    <meta name="viewport" id="meta_viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
+    <?php
 add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/bootstrap/css/bootstrap.min.css?ver='.G5_CSS_VER.'">',0);
 add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/fontawesome5/css/fontawesome-all.min.css?ver='.G5_CSS_VER.'">',0);
 add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/eyoom-form/css/eyoom-form.min.css?ver='.G5_CSS_VER.'">',0);
@@ -32,6 +34,7 @@ add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/css/common.css?
 add_stylesheet('<link rel="stylesheet" href="' . EYOOM_THEME_URL . '/css/style.css?ver=' . G5_CSS_VER . '">', 0);
 add_stylesheet('<link rel="stylesheet" href="' . EYOOM_THEME_URL . '/css/custom.css?ver=' . G5_CSS_VER . '">', 0);
 add_stylesheet('<link rel="stylesheet" href="' . EYOOM_THEME_URL . '/css/dropdown.css?ver=' . G5_CSS_VER . '">', 0);
+add_stylesheet('<link rel="stylesheet" href="' . EYOOM_THEME_URL . '/css/hamburger.css?ver=' . G5_CSS_VER . '">', 0);
 add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/font-awesome/css/font-awesome.min.css">', 0);
 ?>
 <!--[if lte IE 8]>
