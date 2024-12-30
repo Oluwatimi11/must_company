@@ -1,0 +1,123 @@
+/*See More Dropdown*/
+.see-more {
+    position: relative;
+    display: inline-block;
+}
+
+.see-more-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 10;
+    min-width: 150px;
+    padding: 2px;
+}
+
+.see-more-item {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #17191E;
+    font-size: 13px;
+    transition: background-color 0.3s ease;
+}
+
+.see-more-item:hover {
+    background-color: #F7F3FF;
+    color: #17191E;
+}
+
+.list-item:hover .see-more-menu {
+    display: block;
+}
+
+.see-more-div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.list-btn-text {
+    font-size: 14px;
+    color: #333;
+}
+
+
+
+/*Three Dimensional Dropdown*/
+/* General styling for the navigation */
+/*.bottom-nav {*/
+/*    background-color: #f8f9fa;*/
+/*    padding: 10px 20px;*/
+/*}*/
+
+/*.bottom-nav-list {*/
+/*    display: flex;*/
+/*    gap: 20px;*/
+/*}*/
+
+/*.bottom-list-item {*/
+/*    position: relative;*/
+/*}*/
+
+/*.bottom-list-item-div {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    gap: 5px;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/* First-level dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Align below the parent */
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px 0;
+    z-index: 10;
+    min-width: 200px;
+}
+
+.sub-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; /* Align to the right of the parent */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px 0;
+    z-index: 10;
+}
+
+.dropdown-item {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+    color: #007bff;
+}
+
+.dropdown-item.has-submenu:hover > .sub-dropdown-menu {
+    display: block;
+}
+
+.bottom-list-item:hover > .dropdown-menu {
+    display: block;
+}

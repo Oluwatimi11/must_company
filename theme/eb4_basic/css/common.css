@@ -6,7 +6,7 @@
 body, h1, h2, h3, h4, h5, h6, label, input, button, textarea, select, img {font-family:'Pretendard', sans-serif}
 
 /*---------- Reset ----------*/
-html {overflow-y:scroll;min-width:320px}
+html {overflow-y:scroll;min-width:320px;}
 body {margin:0;padding:0;font-size:.9375rem;background:#fff;height:100%}
 html, h1, h2, h3, h4, h5, h6, form, fieldset, img {margin:0;padding:0;border:0}
 h1, h2, h3, h4, h5, h6 {word-break:keep-all}
@@ -358,6 +358,7 @@ a.btn, .btn {width:inherit;height:inherit}
 
 /* Padding Left */
 .p-l-0 {padding-left:0 !important}
+.p-l-2 {padding-left:2px !important}
 .p-l-5 {padding-left:5px !important}
 .p-l-10 {padding-left:10px !important}
 .p-l-15 {padding-left:15px !important}
@@ -376,6 +377,7 @@ a.btn, .btn {width:inherit;height:inherit}
 
 /* Padding Right */
 .p-r-0 {padding-right:0 !important}
+.p-r-2 {padding-right:2px !important}
 .p-r-5 {padding-right:5px !important}
 .p-r-10 {padding-right:10px !important}
 .p-r-15 {padding-right:15px !important}
@@ -530,6 +532,7 @@ a.btn, .btn {width:inherit;height:inherit}
 .bd-r-8 {border-radius:8px !important}
 .bd-r-9 {border-radius:9px !important}
 .bd-r-10 {border-radius:10px !important}
+.bd-r-20 {border-radius:20px !important}
 .bd-r-50 {border-radius:50% !important}
 .bd-r-100 {border-radius:100% !important}
 .bd-r-1r {border-radius:1rem !important}
@@ -562,6 +565,7 @@ a.btn, .btn {width:inherit;height:inherit}
 .text-brown {color:#6d4c41 !important}
 .text-gray {color:#757575 !important}
 .text-light-gray {color:#b5b5b5 !important}
+.text-dark-gray {color: #9DA6BB !important;}
 .text-black {color:#000 !important}
 .text-white {color:#fff !important}
 /* EyoomBuilder bs3 text colors compatible */
@@ -1334,3 +1338,5 @@ pre[class*="language-"] {border-radius:0 !important}
 .cke_sc_def button {padding:3px 15px;background:#555555;color:#fff;border:none}
 /*Tui Editor*/
 .toastui-editor-defaultUI-toolbar {background-color:transparent !important;padding:0 !important}
+
+.display-flex {display: flex; flex-direction: row; justify-content: space-between !important;}

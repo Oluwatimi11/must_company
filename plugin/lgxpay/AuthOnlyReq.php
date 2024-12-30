@@ -114,7 +114,6 @@ $_SESSION['lgd_certify'] = $payReqMap;
 <script language="javascript" src="https://xpay.tosspayments.com/xpay/js/xpay_crossplatform.js" type="text/javascript"></script>
 
 <script type="text/javascript">
-
 	/*
 	* 수정불가.
 	*/

@@ -5,7 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="701094c1-8107-4d23-a5a6-6285fb9c3646" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/eb4_basic/css/dropdown.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/eb4_basic/headed.html.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/eb4_basic/image/p2u-dark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/eb4_basic/image/p2u.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/eb4_basic/js/dropdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/eb4_basic/tailed.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/default.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/default.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extend/version.extend.php" beforeDir="false" afterPath="$PROJECT_DIR$/extend/version.extend.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eyoom/lib/ebbanner.lib.php" beforeDir="false" afterPath="$PROJECT_DIR$/eyoom/lib/ebbanner.lib.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eyoom/lib/ebslider.lib.php" beforeDir="false" afterPath="$PROJECT_DIR$/eyoom/lib/ebslider.lib.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/common.lib.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common.lib.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin/lgxpay/AuthOnlyReq.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/lgxpay/AuthOnlyReq.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/eb4_basic/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/theme/eb4_basic/css/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/eb4_basic/css/shop_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/theme/eb4_basic/css/shop_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/eb4_basic/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/theme/eb4_basic/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/eb4_basic/head.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/theme/eb4_basic/head.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/eb4_basic/head.sub.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/theme/eb4_basic/head.sub.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/eb4_basic/index.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/theme/eb4_basic/index.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/eb4_basic/tail.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/theme/eb4_basic/tail.html.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +34,13 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -22,31 +48,35 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/usr/local/Cellar/php/8.3.6/bin/php" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2qjZnODEvVCnTKev3RRpRORu7q3" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Applications/XAMPP/xamppfiles/htdocs/must_company/css/images",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Applications/XAMPP/xamppfiles/htdocs/must_company/theme/eb4_basic/image&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/theme/eb4_basic/image" />
       <recent name="$PROJECT_DIR$/css/images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/theme/eb4_basic" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -65,6 +95,8 @@
       <option name="presentableId" value="Default" />
       <updated>1735178110398</updated>
       <workItem from="1735178111781" duration="937000" />
+      <workItem from="1735179491499" duration="38340000" />
+      <workItem from="1735486325092" duration="19281000" />
     </task>
     <servers />
   </component>

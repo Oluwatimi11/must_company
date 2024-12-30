@@ -1,4 +1,6 @@
 <?php
+
+// Report all errors
 /**
  * lib file : /eyoom/lib/ebbanner.lib.php
  */

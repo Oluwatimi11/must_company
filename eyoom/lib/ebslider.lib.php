@@ -33,6 +33,7 @@ function eb_slider ($es_code) {
     if (file_exists($master_file) && !is_dir($master_file)) {
         include($master_file);
     } else {
+        echo $g5['eyoom_slider'];
         $es_master = sql_fetch("select * from {$g5['eyoom_slider']} where (1) and es_code = '{$es_code}' limit 1 ");
 
         /**

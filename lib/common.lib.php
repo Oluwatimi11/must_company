@@ -2804,6 +2804,7 @@ class html_process {
     {
         $links = self::$css;
         $is_merge = true;
+      //  echo $stylesheet;
 
         foreach($links as $link) {
             if($link[1] == $stylesheet) {
@@ -2811,9 +2812,9 @@ class html_process {
                 break;
             }
         }
-
         if($is_merge)
             self::$css[] = array($order, $stylesheet);
+        echo $stylesheet;
     }
 
     public static function merge_javascript($javascript, $order)
