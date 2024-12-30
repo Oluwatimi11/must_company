@@ -5,26 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="701094c1-8107-4d23-a5a6-6285fb9c3646" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/theme/eb4_basic/css/dropdown.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/eb4_basic/headed.html.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/eb4_basic/image/p2u-dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/eb4_basic/image/p2u.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/eb4_basic/js/dropdown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/eb4_basic/tailed.html.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/eb4_basic/includes/dropdown-items.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/default.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/default.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/extend/version.extend.php" beforeDir="false" afterPath="$PROJECT_DIR$/extend/version.extend.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eyoom/lib/ebbanner.lib.php" beforeDir="false" afterPath="$PROJECT_DIR$/eyoom/lib/ebbanner.lib.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eyoom/lib/ebslider.lib.php" beforeDir="false" afterPath="$PROJECT_DIR$/eyoom/lib/ebslider.lib.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/common.lib.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common.lib.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/lgxpay/AuthOnlyReq.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/lgxpay/AuthOnlyReq.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/eb4_basic/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/theme/eb4_basic/css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/eb4_basic/css/shop_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/theme/eb4_basic/css/shop_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/eb4_basic/css/dropdown.css" beforeDir="false" afterPath="$PROJECT_DIR$/theme/eb4_basic/css/dropdown.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/theme/eb4_basic/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/theme/eb4_basic/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/theme/eb4_basic/head.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/theme/eb4_basic/head.html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/eb4_basic/head.sub.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/theme/eb4_basic/head.sub.html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/eb4_basic/index.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/theme/eb4_basic/index.html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/eb4_basic/tail.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/theme/eb4_basic/tail.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/eb4_basic/js/dropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/theme/eb4_basic/js/dropdown.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +83,8 @@
       <updated>1735178110398</updated>
       <workItem from="1735178111781" duration="937000" />
       <workItem from="1735179491499" duration="38340000" />
-      <workItem from="1735486325092" duration="19281000" />
+      <workItem from="1735486325092" duration="20332000" />
+      <workItem from="1735549923230" duration="7341000" />
     </task>
     <servers />
   </component>

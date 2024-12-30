@@ -8,6 +8,8 @@ add_stylesheet('<link rel="stylesheet" href="' . EYOOM_THEME_URL . '/css/style.c
 add_stylesheet('<link rel="stylesheet" href="' . EYOOM_THEME_URL . '/css/custom.css?ver=' . G5_CSS_VER . '">', 0);
 add_stylesheet('<link rel="stylesheet" href="' . EYOOM_THEME_URL . '/css/dropdown.css?ver=' . G5_CSS_VER . '">', 0);
 
+include_once(EYOOM_THEME_PATH . '/includes/dropdown-items.php');
+
 /**
  * 로고 타입 : 'image' || 'text'
  */
@@ -83,17 +85,20 @@ $is_megamenu = 'yes';
                 <div class="header-title-list display-flex">
                     <div class="list-item">
                         <!-- Only members have access. -->
-                        <a class="list-link" <?php if ($is_member) { ?>href="<?php echo G5_URL; ?>/?<?php echo $member['mb_id']; ?>"
+                        <a class="list-link"
+                           <?php if ($is_member) { ?>href="<?php echo G5_URL; ?>/?<?php echo $member['mb_id']; ?>"
                            <?php } else { ?>href="javascript:void(0);" onclick="alert('회원만 접근하실 수 있습니다.');"<?php } ?>>
                             <div class="list-item-div">
                                 <!-- Hong Gil-dong  11,181,887 P2U-->
-                                <span class="list-btn-text">홍길동님 <span class="title-add-span">11,181,887 P2U</span></span>
+                                <span class="list-btn-text">홍길동님 <span
+                                            class="title-add-span">11,181,887 P2U</span></span>
                             </div>
                         </a>
                     </div>
                     <div class="list-item">
                         <!-- Only members have access. -->
-                        <a class="list-link" <?php if ($is_member) { ?>href="<?php echo G5_URL; ?>/?<?php echo $member['mb_id']; ?>"
+                        <a class="list-link"
+                           <?php if ($is_member) { ?>href="<?php echo G5_URL; ?>/?<?php echo $member['mb_id']; ?>"
                            <?php } else { ?>href="javascript:void(0);" onclick="alert('회원만 접근하실 수 있습니다.');"<?php } ?>>
                             <div class="list-item-div">
                                 <!-- Shopping Cart -->
@@ -102,8 +107,8 @@ $is_megamenu = 'yes';
                         </a>
                     </div>
                     <div class="list-item">
-                            <a class="list-link" <?php if ($is_member) { ?>href="<?php echo G5_URL; ?>/mypage/"
-                               <?php } else { ?>href="javascript:void(0);" onclick="alert('회원만 접근하실 수 있습니다.');"<?php } ?>>
+                        <a class="list-link" <?php if ($is_member) { ?>href="<?php echo G5_URL; ?>/mypage/"
+                           <?php } else { ?>href="javascript:void(0);" onclick="alert('회원만 접근하실 수 있습니다.');"<?php } ?>>
                             <div class="list-item-div">
                                 <!-- My page -->
                                 <span class="list-btn-text">마이페이지</span>
@@ -130,15 +135,12 @@ $is_megamenu = 'yes';
                         </a>
 
                         <div class="see-more-menu">
-                            <a href="#option1" class="see-more-item">장바구니</a>
-                            <a href="#option2" class="see-more-item">위시리스트</a>
-                            <a href="#option3" class="see-more-item">주문/배송조회</a>
-                            <a href="#option3" class="see-more-item">이벤트</a>
-                            <a href="#option3" class="see-more-item">개인결제</a>
-                            <a href="#option3" class="see-more-item">사용후기</a>
-                            <a href="#option3" class="see-more-item">FAQ</a>
-                            <a href="#option3" class="see-more-item">1:1문의</a>
+                            <?php foreach ($moreItems as $item) : ?>
+                                <a href="<?php echo $item['url']; ?>"
+                                   class="see-more-item"><?php echo $item['label']; ?></a>
+                            <?php endforeach; ?>
                         </div>
+
                     </div>
                 </div>
 
@@ -164,75 +166,46 @@ $is_megamenu = 'yes';
         </div>
         <div class="bottom-nav m-t-10">
             <div class="bottom-nav-list display-flex align-items-center">
-                <div class="bottom-list-item">
-                    <!-- Only members have access. -->
-                    <a <?php if ($is_member) { ?>href="<?php echo G5_URL; ?>/?<?php echo $member['mb_id']; ?>"
-                       <?php } else { ?>href="javascript:void(0);" onclick="alert('회원만 접근하실 수 있습니다.');"<?php } ?>>
-                        <div class="bottom-list-item-div display-flex">
-                            <!-- All products -->
+                <div class="bottom-list-item dropdown-trigger">
+                    <a href="javascript:void(0);">
+                        <div class="bottom-list-item-div">
                             <i class="fas fa-bars"></i>
-                            <h6 class="eyoom-btn-text m-l-5">전체상품</h6>
+                            <h6 class="eyoom-btn-text">전체상품</h6>
                         </div>
                     </a>
-                </div>
-                <div class="bottom-list-item">
-                    <!-- Only members have access. -->
-                    <a <?php if ($is_member) { ?>href="<?php echo G5_URL; ?>/?<?php echo $member['mb_id']; ?>"
-                       <?php } else { ?>href="javascript:void(0);" onclick="alert('회원만 접근하실 수 있습니다.');"<?php } ?>>
-                        <div class="bottom-list-item-div">
-                            <!-- P2U Introduction -->
-                            <h6 class="eyoom-btn-text">P2U소개</h6>
+
+                    <div class="category-dropdown">
+                        <div class="category-columns">
+                            <div class="category-column">
+                                <ul id="parent-categories"></ul>
+                            </div>
+                            <div class="category-column">
+                                <ul id="child-categories"></ul>
+                            </div>
+                            <div class="category-column">
+                                <ul id="grandchild-categories"></ul>
+                            </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
-                <div class="bottom-list-item">
-                    <a href="<?php echo G5_URL; ?>/mypage/" class="sidebar-member-btn-box">
-                        <div class="bottom-list-item-div">
-                            <!-- Hit Product -->
-                            <h6 class="eyoom-btn-text">히트상품</h6>
-                        </div>
-                    </a>
-                </div>
-                <div class="bottom-list-item">
-                    <!-- Only members have access. -->
-                    <a href="<?php echo G5_BBS_URL ?>/logout.php">
-                        <div class="bottom-list-item-div">
-                            <!-- Brand Hall -->
-                            <h6 class="eyoom-btn-text">브랜드관</h6>
-                        </div>
-                    </a>
-                </div>
-                <div class="bottom-list-item">
-                    <!-- Only members have access. -->
-                    <a href="<?php echo G5_BBS_URL ?>/logout.php">
-                        <div class="bottom-list-item-div">
-                            <!-- Chuseok Gift -->
-                            <h6 class="eyoom-btn-text">추석선물</h6>
-                        </div>
-                    </a>
-                </div>
-                <div class="bottom-list-item">
-                    <!-- Only members have access. -->
-                    <a href="<?php echo G5_BBS_URL ?>/logout.php">
-                        <div class="bottom-list-item-div">
-                            <!-- Event -->
-                            <h6 class="eyoom-btn-text">이벤트</h6>
-                        </div>
-                    </a>
-                </div>
-                <div class="bottom-list-item">
-                    <!-- Only members have access. -->
-                    <a href="<?php echo G5_BBS_URL ?>/logout.php">
-                        <div class="bottom-list-item-div">
-                            <!-- Contest -->
-                            <h6 class="eyoom-btn-text">공모전</h6>
-                        </div>
-                    </a>
-                </div>
+
+                <?php
+                foreach ($navItems as $item) {
+                    echo '<div class="bottom-list-item">
+                <a href="' . $item['url'] . '">
+                    <div class="bottom-list-item-div">
+                        <h6 class="eyoom-btn-text">' . $item['label'] . '</h6>
+                    </div>
+                </a>
+            </div>';
+                }
+                ?>
             </div>
         </div>
     </header>
     <?php /*----- header 끝 -----*/ ?>
+
+    <script src="<?php echo EYOOM_THEME_URL ?>/js/dropdown.js"></script>
 
     <!-- When it is not the main -->
     <?php if (!defined('_INDEX_')) { // 메인이 아닐때 ?>

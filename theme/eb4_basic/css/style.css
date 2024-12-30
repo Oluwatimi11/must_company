@@ -1809,16 +1809,27 @@
 }
 
 .bottom-nav {
+    position: relative;
     width: 60%;
     height: 35px;
     align-content: center;
 }
 
 .bottom-list-item {
+    position: relative;
     height: 100%;
 }
 
+/*.bottom-nav-list {*/
+/*    gap: 20px;*/
+/*    padding: 0 20px;*/
+/*}*/
+
 .bottom-list-item-div {
+    display: flex;
+    gap: 8px;
+    /*padding: 15px 10px;*/
+    cursor: pointer;
     padding-bottom: 15px;
     align-items: center;
 }
